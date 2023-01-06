@@ -1,15 +1,15 @@
 
 import Navbar from "./components/Navbar";
 import Home from "./components/home";
-import MobileNav from "./components/mobileNav";
+import '../src/styles.css'
+
 const App = () => {
   return (
+    // eslint-disable-next-line
     <div>
-      {//<Navbar />
-      //<Home />
-    }
-    <Navbar/>
-    <MobileNav/>
+      <Navbar />
+      <Home />
+
     </div>
 
 

@@ -1,5 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
-
+// eslint-disable-next-line
 const breakpoints = {
     sm: '30em',
     md: '48em',
