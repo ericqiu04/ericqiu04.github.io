@@ -1,19 +1,22 @@
-import { Flex, Icon, IconButton, Text } from '@chakra-ui/react'
-import { MoonIcon, SunIcon, HamburgerIcon } from '@chakra-ui/icons'
+import { Collapse, Flex, Icon, IconButton, Text } from '@chakra-ui/react'
+import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiDocumentText } from 'react-icons/hi'
 import { useColorMode, useColorModeValue } from '@chakra-ui/react'
-import { Stack, HStack } from '@chakra-ui/react'
+import { HStack } from '@chakra-ui/react'
+import { useDisclosure } from '@chakra-ui/react'
+
+
 
 import { Box } from '@chakra-ui/react'
 const Navbar = () => {
+    const { isOpen, onToggle } = useDisclosure()
     const { colorMode, toggleColorMode } = useColorMode()
-    const bg = useColorModeValue('white', 'black')
     const color = useColorModeValue('black', 'white')
-    return (<Box maxW='100%' p={4} bg={bg} color={color} >
+    return (<Box maxW='100%' p={4} color={color} >
         <Flex alignItems="center" justify="space-between" ml={['5px', '5px', '20px', '20px']} mr={['5px', '5px', '20px', '20px']}>
 
-            <Text as='b' fontSize='30px' justify='left'>Eric Qiu</Text>
+            <Text as='b' fontSize='30px' justify='left'>EQ</Text>
 
             <Flex display={['none', 'none', 'flex', 'flex']} >
                 <HStack spacing={8} justify="right">
@@ -32,7 +35,7 @@ const Navbar = () => {
             </Flex>
 
             <Flex display={['flex', 'flex', 'none', 'none']}>
-                
+
                 <HStack spacing={8} justify="right">
                     {colorMode === "dark" ? (
                         <Icon as={SunIcon} boxSize={['5', '5', '10', '10']} onClick={toggleColorMode} />
@@ -40,12 +43,24 @@ const Navbar = () => {
                         <Icon as={MoonIcon} boxSize={['5', '5', '10', '10']} onClick={toggleColorMode} />
                     )
                     }
-                    <IconButton
+                    {isOpen === false ? (
+                        <IconButton
                         aria-label='Open-Menu'
                         size='lg'
+                        bg='default'
                         mr={2}
                         icon={<HamburgerIcon />}
+                        onClick={onToggle}
                     />
+                    ) : (<IconButton
+                        aria-label='Open-Menu'
+                        size='lg'
+                        bg='default'
+                        mr={2}
+                        icon={<CloseIcon />}
+                        onClick={onToggle}
+                    />)}
+
                 </HStack>
             </Flex>
 
