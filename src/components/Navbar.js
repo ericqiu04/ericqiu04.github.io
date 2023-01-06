@@ -50,7 +50,7 @@ const Navbar = () => {
                         whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ type: "spring", stiffness: 400, damping: 17 }}>
-                        <Icon color={textCol} as={FaGithub} boxSize={['5', '5', '10', '10']} />
+                        <Icon color={textCol} as={FaGithub} boxSize={['5', '5', '12', '12']} />
                     </motion.a>
 
                     <motion.a
@@ -59,7 +59,7 @@ const Navbar = () => {
                         whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ type: "spring", stiffness: 400, damping: 17 }}>
-                        <Icon color={textCol} as={HiDocumentText} boxSize={['5', '5', '10', '10']} />
+                        <Icon color={textCol} as={HiDocumentText} boxSize={['5', '5', '14', '14']} />
                     </motion.a>
 
                     <motion.a
@@ -69,7 +69,7 @@ const Navbar = () => {
                         whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ type: "spring", stiffness: 400, damping: 17 }}>
-                        <Icon color={textCol} as={FaLinkedin} boxSize={['5', '5', '10', '10']} />
+                        <Icon color={textCol} as={FaLinkedin} boxSize={['5', '5', '12', '12']} />
                     </motion.a>
 
                     {colorMode === "dark" ? (
