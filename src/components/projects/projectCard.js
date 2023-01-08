@@ -1,8 +1,6 @@
-import { Card, CardBody, Text, Image, Stack, Heading, useColorModeValue, Icon } from "@chakra-ui/react"
-import { ArrowForwardIcon } from "@chakra-ui/icons"
+import { Card, CardBody, Text, Stack, Heading, useColorModeValue, Icon } from "@chakra-ui/react"
 import { BsBoxArrowUpRight } from "react-icons/bs"
 import { useState } from "react"
-import { MotionConfig } from "framer-motion"
 import { motion } from "framer-motion"
 import '../../styles.css'
 const PCard = (info) => {

@@ -1,4 +1,4 @@
-import { HStack, Card, CardBody, Text, Stack, Heading, useColorModeValue, Icon, Center, IconButton, Image } from "@chakra-ui/react"
+import { HStack, Card, CardBody, Text, Stack, Heading, useColorModeValue, IconButton, Image } from "@chakra-ui/react"
 import { BsBoxArrowDownLeft } from "react-icons/bs"
 import { motion } from "framer-motion"
 import Backdrop from "./backdrop"

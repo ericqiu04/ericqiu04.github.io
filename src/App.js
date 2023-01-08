@@ -3,8 +3,8 @@ import Navbar from "./components/beginning/Navbar";
 import Home from "./components/beginning/home";
 import '../src/styles.css'
 import { Projects } from "./components/projects/projects";
-import PCard from "./components/projects/projectCard";
-import PCardExpand from "./components/projects/projectCardExpand";
+
+import { About } from "./components/about-me/about";
 const App = () => {
   return (
     // eslint-disable-next-line
@@ -12,6 +12,7 @@ const App = () => {
       <Navbar />
       <Home />
       <Projects/>
+      <About/>
     </div>
 
 

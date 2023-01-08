@@ -1,8 +1,8 @@
-import { Flex, Icon, IconButton, Text, Collapse, Slide } from '@chakra-ui/react'
+import { Flex, Icon, IconButton, Text,  Slide } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiDocumentText } from 'react-icons/hi'
-import { useColorMode, useColorModeValue } from '@chakra-ui/react'
+import { useColorModeValue } from '@chakra-ui/react'
 import { HStack } from '@chakra-ui/react'
 import { useDisclosure, Image } from '@chakra-ui/react'
 import { motion } from "framer-motion";
@@ -15,10 +15,11 @@ import icon from '../../matcha-tea-icon.png'
 import { Box } from '@chakra-ui/react'
 const Navbar = () => {
     const { isOpen, onToggle } = useDisclosure()
-    const { colorMode, toggleColorMode } = useColorMode()
+    {//const { colorMode, toggleColorMode } = useColorMode()
+    }
     const color = useColorModeValue('black', 'white')
     const textCol = useColorModeValue('#61876E', '#A6BB8D')
-    const handleClick = () => {
+    {/*const handleClick = () => {
         toggleColorMode();
         const styleEl = document.createElement('style');
         const cssText = document.createTextNode(
@@ -29,7 +30,7 @@ const Navbar = () => {
         setTimeout(() => {
             document.head.removeChild(styleEl);
         }, 300);
-    };
+    };*/}
     return (
         <Box maxW='100%' p={4} color={color} sx={{ position: '-webkit-sticky', /* Safari */ position: 'sticky', top: '0', }} backdropBlur="20px" zIndex={100} position='relative' >
             <Flex alignItems="center" justify="space-between" ml={['5px', '5px', '20px', '20px']} mr={['5px', '5px', '20px', '20px']}>
