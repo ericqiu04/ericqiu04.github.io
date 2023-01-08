@@ -13,13 +13,13 @@ export const Projects = () => {
 
             <Flex display={['none', 'none', 'block', 'block']}>
                 <VStack>
-                    <Text fontSize={50} as='b' mt={-200}>
+                    <Text fontSize={50} as='b' mt={-200} color="#3C6255">
                         Projects
                     </Text>
 
 
                     <HStack>
-                        <Grid templateColumns='repeat(2, 1fr)' gap={6} padding = {10}>
+                        <Grid templateColumns='repeat(2, 1fr)' gap={20} padding={10}>
                             {Information.map(PCard)}
                         </Grid>
                     </HStack>
@@ -30,12 +30,14 @@ export const Projects = () => {
 
             <Flex display={['block', 'block', 'none', 'none']} >
                 <VStack >
-                    <Text fontSize={50} as='b' mt={-50}>
+                    <Text fontSize={50} as='b' mt={-50} mb={10} color="#3C6255">
                         Projects
                     </Text>
 
                     <VStack>
-                        {Information.map(PCard)}
+                        <Grid templateColumns='repeat(1, 1fr)' gap={10} padding={10}>
+                            {Information.map(PCard)}
+                        </Grid>
                     </VStack>
 
 

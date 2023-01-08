@@ -19,3 +19,7 @@
     transition: 850ms;
     
 }
+
+.projectCard {
+    cursor: pointer;
+}

@@ -23,10 +23,8 @@ const CardNoImage = () => {
                             </Text>
                             <IconButton bg='default' color={textCol} position="absolute" top="10px" right="20px" boxSize="30px" as={BsBoxArrowDownLeft}></IconButton>
                         </Stack>
-
-
-
                     </CardBody>
+
                 </Card>
 
 
