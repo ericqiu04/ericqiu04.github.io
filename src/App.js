@@ -5,7 +5,7 @@ import '../src/styles.css'
 import { Projects } from "./components/projects/projects";
 import ContactMe from "./components/contact form/contactForm";
 import { About } from "./components/about-me/about";
-import { Footer } from "./footer/footer";
+import { Footer } from "./components/footer/footer";
 import PCardExpand from "./components/projects/projectCardExpand";
 const App = () => {
   return (

@@ -2,6 +2,7 @@ import { HStack, Card, CardBody, Text, Stack, Heading, useColorModeValue, IconBu
 import { BsBoxArrowDownLeft } from "react-icons/bs"
 import { motion } from "framer-motion"
 import Backdrop from "./backdrop"
+import image from '../../images/Coding-vs-programming.jpg'
 
 const PCardExpand = ({ handleClose, text }) => {
     const textCol = useColorModeValue('#61876E', '#A6BB8D')
