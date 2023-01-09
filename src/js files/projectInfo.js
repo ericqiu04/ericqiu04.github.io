@@ -4,7 +4,9 @@ export const Information = [
         projectType: "Web App",
         projectName: "E-Commerce Store",
         projectGithub: "https://github.com/ericqiu04/ecommerce-store",
-        technologies: "React.js, Firebase"
+        technologies: "React.js, Firebase",
+        projectIMG:null,
+        
 
     },
 

@@ -53,7 +53,7 @@ const PCard = (info) => {
       >
         <Card
           w="500px"
-          display={["none", "none", "block", "block"]}
+          display={["none", "none", 'none', "block", "block"]}
           borderWidth="2px"
           borderColor={textCol}
           onClick={onOpen}
@@ -81,9 +81,10 @@ const PCard = (info) => {
 
         <Card
           w="400px"
-          display={["block", "block", "none", "none"]}
+          display={["block", "block", 'block', "none", "none"]}
           borderWidth="2px"
           borderColor={textCol}
+          onClick={onOpen}
         >
           <CardBody>
             <Stack mt="6" spacing="3" p={10}>
@@ -107,14 +108,50 @@ const PCard = (info) => {
         </Card>
       </motion.div>
 
-  
-        <Modal onClose={onClose} isOpen={isOpen} isCentered>
-          <ModalOverlay />
-          <ModalContent maxW="80%">
-            <ModalHeader color={darkCol}>{info.projectName}</ModalHeader>
-            <ModalBody>
-              <HStack>
-                <Image src={image} boxSize="50%"></Image>
+
+      <Modal onClose={onClose} isOpen={isOpen} isCentered>
+        <ModalOverlay />
+        {info.projectIMG === null ? (
+          <>
+            <ModalContent maxW="80%" display={['none', 'none', 'none', 'block', 'block']}>
+              <ModalHeader color={darkCol}>{info.projectName}</ModalHeader>
+              <ModalBody>
+
+
+                <Flex justifyContent="center" overflow="scroll">
+                  <VStack>
+                    <VStack>
+                      <Heading>Technologies</Heading>
+                      <Text>{info.technologies}</Text>
+                    </VStack>
+                    <HStack>
+                      <Button>Github</Button>
+                      <Button>Live</Button>
+                    </HStack>
+                    <VStack>
+                      <Heading>Description</Heading>
+                      <Text>Hi</Text>
+                    </VStack>
+                  </VStack>
+                </Flex>
+
+                <IconButton
+                  onClick={onClose}
+                  bg="default"
+                  color={textCol}
+                  position="absolute"
+                  top="20px"
+                  right="20px"
+                  boxSize="30px"
+                  as={BsBoxArrowDownLeft}
+                ></IconButton>
+              </ModalBody>
+            </ModalContent>
+
+
+            <ModalContent maxW="80%" display={['block', 'block', 'block', 'none', 'none']}>
+              <ModalHeader color={darkCol}>{info.projectName}</ModalHeader>
+              <ModalBody>
                 <Flex boxSize="50%" justifyContent="center" overflow="scroll">
                   <VStack>
                     <VStack>
@@ -131,21 +168,99 @@ const PCard = (info) => {
                     </VStack>
                   </VStack>
                 </Flex>
-              </HStack>
-              <IconButton
-                onClick={onClose}
-                bg="default"
-                color={textCol}
-                position="absolute"
-                top="20px"
-                right="20px"
-                boxSize="30px"
-                as={BsBoxArrowDownLeft}
-              ></IconButton>
-            </ModalBody>
-          </ModalContent>
-        </Modal>
-      
+
+                <IconButton
+                  onClick={onClose}
+                  bg="default"
+                  color={textCol}
+                  position="absolute"
+                  top="20px"
+                  right="20px"
+                  boxSize="30px"
+                  as={BsBoxArrowDownLeft}
+                ></IconButton>
+              </ModalBody>
+            </ModalContent>
+          </>
+        ) : (
+          <>
+            <ModalContent maxW="80%" display={['none', 'none', 'none', 'block', 'block']}>
+              <ModalHeader color={darkCol}>{info.projectName}</ModalHeader>
+              <ModalBody>
+                <HStack>
+                  <Image src={image} boxSize="50%"></Image>
+                  <Flex boxSize="50%" justifyContent="center" overflow="scroll">
+                    <VStack>
+                      <VStack>
+                        <Heading>Technologies</Heading>
+                        <Text>{info.technologies}</Text>
+                      </VStack>
+                      <HStack>
+                        <Button>Github</Button>
+                        <Button>Live</Button>
+                      </HStack>
+                      <VStack>
+                        <Heading>Description</Heading>
+                        <Text>Hi</Text>
+                      </VStack>
+                    </VStack>
+                  </Flex>
+                </HStack>
+                <IconButton
+                  onClick={onClose}
+                  bg="default"
+                  color={textCol}
+                  position="absolute"
+                  top="20px"
+                  right="20px"
+                  boxSize="30px"
+                  as={BsBoxArrowDownLeft}
+                ></IconButton>
+              </ModalBody>
+            </ModalContent>
+
+
+            <ModalContent maxW="80%" display={['block', 'block', 'block', 'none', 'none']}>
+              <ModalHeader color={darkCol}>{info.projectName}</ModalHeader>
+              <ModalBody>
+                <VStack>
+                  <Image src={image} boxSize="100%"></Image>
+                  <Flex boxSize="50%" justifyContent="center" overflow="scroll">
+                    <VStack>
+                      <VStack>
+                        <Heading>Technologies</Heading>
+                        <Text>{info.technologies}</Text>
+                      </VStack>
+                      <HStack>
+                        <Button>Github</Button>
+                        <Button>Live</Button>
+                      </HStack>
+                      <VStack>
+                        <Heading>Description</Heading>
+                        <Text>Hi</Text>
+                      </VStack>
+                    </VStack>
+                  </Flex>
+                </VStack>
+                <IconButton
+                  onClick={onClose}
+                  bg="default"
+                  color={textCol}
+                  position="absolute"
+                  top="20px"
+                  right="20px"
+                  boxSize="30px"
+                  as={BsBoxArrowDownLeft}
+                ></IconButton>
+              </ModalBody>
+            </ModalContent>
+          </>
+
+        )
+        }
+
+      </Modal>
+
     </>
   );
 };
