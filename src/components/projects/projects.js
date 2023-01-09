@@ -7,7 +7,7 @@ export const Projects = () => {
     return (
         <>
 
-            <Flex display={['none', 'none', 'block', 'block']}>
+            <Flex display={['none', 'none', 'none', 'block', 'block']}>
                 <VStack>
                     <Text fontSize={50} as='b' mt={-200} color="#3C6255">
                         Projects
@@ -24,7 +24,7 @@ export const Projects = () => {
                 </VStack>
             </Flex>
 
-            <Flex display={['block', 'block', 'none', 'none']} >
+            <Flex display={['block', 'block', 'block', 'none', 'none']} >
                 <VStack >
                     <Text fontSize={50} as='b' mt={-50} mb={10} color="#3C6255">
                         Projects

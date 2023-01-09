@@ -25,7 +25,7 @@ class ContactMe extends Component {
 
             <Flex justifyContent='center' alignItems='center' mt={10} p={30}>
 
-                <Flex display={['none', 'none', 'flex', 'flex']}>
+                <Flex display={['none', 'none','none', 'flex', 'flex']}>
 
                     <HStack spacing={10} >
                         <div>
@@ -86,17 +86,17 @@ class ContactMe extends Component {
                     </HStack >
                 </Flex>
 
-                <Flex display={['flex', 'flex', 'none', 'none']}>
+                <Flex display={['flex', 'flex', 'flex', 'none', 'none']}>
 
                     <VStack spacing={10} >
-                        <Heading>
+                        <Heading color="#3C6255">
                             Contact Me
                         </Heading>
                         <div>
-                            <Text>
+                            <Text fontSize = "20px">
                                 I would love to get to know you as well!
                             </Text>
-                            <Text>
+                            <Text fontSize = "20px">
                                 Feel free to reach out and have a chat with me!
                             </Text>
                         </div>

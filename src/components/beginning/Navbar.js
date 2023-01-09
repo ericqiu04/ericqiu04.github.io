@@ -69,7 +69,7 @@ const Navbar = () => {
             </HStack>
           </motion.a>
 
-          <Flex display={["none", "none", "flex", "flex"]}>
+          <Flex display={["none", "none",'none', "flex", "flex"]}>
             <HStack spacing={8} justify="right">
               <motion.a
                 href="https://github.com/ericqiu04"
@@ -131,7 +131,7 @@ const Navbar = () => {
             </HStack>
           </Flex>
 
-          <Flex display={["flex", "flex", "none", "none"]}>
+          <Flex display={["flex", "flex",'flex', "none", "none"]}>
             <HStack spacing={8} justify="right">
               {/** {colorMode === "dark" ? (
                         <Icon color={textCol} as={MoonIcon} boxSize={['10', '10', '10', '10']} onClick={handleClick}>
