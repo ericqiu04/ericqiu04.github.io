@@ -6,6 +6,7 @@ import { Projects } from "./components/projects/projects";
 import ContactMe from "./components/contact form/contactForm";
 import { About } from "./components/about-me/about";
 import { Footer } from "./footer/footer";
+import PCardExpand from "./components/projects/projectCardExpand";
 const App = () => {
   return (
     // eslint-disable-next-line
@@ -16,6 +17,7 @@ const App = () => {
       <About/>
       <ContactMe/>
       <Footer/>
+      
     </div>
 
 

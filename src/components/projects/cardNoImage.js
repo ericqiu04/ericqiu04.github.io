@@ -11,7 +11,7 @@ const CardNoImage = () => {
         <>
 
             <motion.div align='center' >
-                <Card maxW='80%' display={['none', 'none', 'block', 'block']} >
+                <Card maxW='80%' display={['none', 'none', 'block', 'block']} outline = "red" >
                     <CardBody>
                         <Stack mt='6' spacing='3' py={40} overflow="scroll" textAlign='center'>
                             <Heading color={darkCol} textAlign="center" size='lg'>Project Name</Heading>
