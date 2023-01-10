@@ -35,16 +35,12 @@ const Navbar = () => {
     <Box
       bg="transparent"
       maxW="100%"
-      p={4}
+      w = "100%"
+      py = {4}
       color={color}
-      sx={{
-        position: "-webkit-sticky",
-        /* Safari */ position: "sticky",
-        top: "0",
-      }}
-      backdropBlur="20px"
       zIndex={100}
-      position="relative"
+      position="fixed"
+      
       
     >
       <Box backdropFilter='auto' backdropBlur='20px' p = {4} mt = {-5}
@@ -69,7 +65,7 @@ const Navbar = () => {
             </HStack>
           </motion.a>
 
-          <Flex display={["none", "none",'none', "flex", "flex"]}>
+          <Flex display={["none", "none", "flex", "flex"]}>
             <HStack spacing={8} justify="right">
               <motion.a
                 href="https://github.com/ericqiu04"
@@ -131,7 +127,7 @@ const Navbar = () => {
             </HStack>
           </Flex>
 
-          <Flex display={["flex", "flex",'flex', "none", "none"]}>
+          <Flex display={["flex", "flex", "none", "none"]}>
             <HStack spacing={8} justify="right">
               {/** {colorMode === "dark" ? (
                         <Icon color={textCol} as={MoonIcon} boxSize={['10', '10', '10', '10']} onClick={handleClick}>

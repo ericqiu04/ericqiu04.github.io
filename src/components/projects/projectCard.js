@@ -12,6 +12,7 @@ import {
   Flex,
   Box,
   VStack,
+  Img,
 } from "@chakra-ui/react";
 import { BsBoxArrowDownLeft } from "react-icons/bs";
 import { BsBoxArrowUpRight } from "react-icons/bs";
@@ -28,13 +29,11 @@ import {
   ModalFooter,
   Button,
 } from "@chakra-ui/react";
-import image from "../../images/Coding-vs-programming.jpg";
 import "../../styles.css";
 import PCardExpand from "./projectCardExpand";
 import { Projects } from "./projects";
 const PCard = (info) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const [scrollBehavior, setScrollBehavior] = useState("inside");
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
 
@@ -111,8 +110,8 @@ const PCard = (info) => {
 
       <Modal onClose={onClose} isOpen={isOpen} isCentered>
         <ModalOverlay />
-        {info.projectIMG === null ? (
-          <>
+        {info.projectIMG == null ? (
+          <div>
             <ModalContent maxW="80%" display={['none', 'none', 'none', 'block', 'block']}>
               <ModalHeader color={darkCol}>{info.projectName}</ModalHeader>
               <ModalBody>
@@ -128,9 +127,9 @@ const PCard = (info) => {
                       <Button>Github</Button>
                       <Button>Live</Button>
                     </HStack>
-                    <VStack>
+                    <VStack width = "50%">
                       <Heading>Description</Heading>
-                      <Text>Hi</Text>
+                      <Text>{info.description}</Text>
                     </VStack>
                   </VStack>
                 </Flex>
@@ -151,7 +150,7 @@ const PCard = (info) => {
 
             <ModalContent maxW="80%" display={['block', 'block', 'block', 'none', 'none']}>
               <ModalHeader color={darkCol}>{info.projectName}</ModalHeader>
-              <ModalBody>
+              <ModalBody align = "center">
                 <Flex boxSize="50%" justifyContent="center" overflow="scroll">
                   <VStack>
                     <VStack>
@@ -164,7 +163,7 @@ const PCard = (info) => {
                     </HStack>
                     <VStack>
                       <Heading>Description</Heading>
-                      <Text>Hi</Text>
+                      <Text>{info.description}</Text>
                     </VStack>
                   </VStack>
                 </Flex>
@@ -181,14 +180,14 @@ const PCard = (info) => {
                 ></IconButton>
               </ModalBody>
             </ModalContent>
-          </>
+          </div>
         ) : (
           <>
             <ModalContent maxW="80%" display={['none', 'none', 'none', 'block', 'block']}>
               <ModalHeader color={darkCol}>{info.projectName}</ModalHeader>
               <ModalBody>
                 <HStack>
-                  <Image src={image} boxSize="50%"></Image>
+                  <Image src={info.projectIMG} boxSize="50%"></Image>
                   <Flex boxSize="50%" justifyContent="center" overflow="scroll">
                     <VStack>
                       <VStack>
@@ -201,7 +200,7 @@ const PCard = (info) => {
                       </HStack>
                       <VStack>
                         <Heading>Description</Heading>
-                        <Text>Hi</Text>
+                        <Text>{info.description}</Text>
                       </VStack>
                     </VStack>
                   </Flex>
@@ -224,7 +223,7 @@ const PCard = (info) => {
               <ModalHeader color={darkCol}>{info.projectName}</ModalHeader>
               <ModalBody>
                 <VStack>
-                  <Image src={image} boxSize="100%"></Image>
+                  <Image src={info.projectIMG} boxSize="100%"></Image>
                   <Flex boxSize="50%" justifyContent="center" overflow="scroll">
                     <VStack>
                       <VStack>
@@ -237,7 +236,7 @@ const PCard = (info) => {
                       </HStack>
                       <VStack>
                         <Heading>Description</Heading>
-                        <Text>Hi</Text>
+                        <Text>{info.description}</Text>
                       </VStack>
                     </VStack>
                   </Flex>
@@ -266,3 +265,4 @@ const PCard = (info) => {
 };
 
 export default PCard;
+

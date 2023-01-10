@@ -12,6 +12,7 @@ export const CardCreate = (info) => {
                 title ={info.projectTitle}
                 git = {info.projectGithub}
                 technologies = {info.technologies}
+                description = {info.description}
             />
         )
     }

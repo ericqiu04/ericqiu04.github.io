@@ -1,6 +1,8 @@
 import { Box, Flex, Text, VStack } from "@chakra-ui/react"
 
 export const About = () => {
+
+    
     return (
         <>
 
