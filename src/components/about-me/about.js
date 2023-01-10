@@ -4,7 +4,7 @@ export const About = () => {
 
     
     return (
-        <>
+        <div id = "about">
 
             <Flex justifyContent="center" >
                 <VStack spacing = {20}>
@@ -36,7 +36,7 @@ export const About = () => {
 
 
 
-        </>
+        </div>
 
 
 

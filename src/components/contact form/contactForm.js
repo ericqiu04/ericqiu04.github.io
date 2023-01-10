@@ -28,7 +28,7 @@ const ContactMe = () => {
 
     return (
 
-        <Flex justifyContent='center' alignItems='center' mt={10} p={30}>
+        <Flex justifyContent='center' alignItems='center' mt={10} p={30} id = "contact">
 
             <Flex display={['none', 'none', 'none', 'flex', 'flex']}>
 

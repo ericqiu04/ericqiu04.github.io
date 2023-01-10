@@ -6,7 +6,7 @@ import img from'../../background.png'
 const Home = () => {
     const textCol = useColorModeValue('#3C6255', '#EAE7B1')
     return (
-        <>
+        <div id = "home">
         <Fade in = {true} delay = '100ms'>
             <Box bgGradient='linear(to-r, #5FC8FF, #6CCFFF, #7CD5FF, #89DAFF, #96DFFD, #A2E4FE, #AFE8FD, #B9EBFD, #C2F1FE, #CDF5FD, #CFF6F9, #D4F6F7, #D9F7F5, #DCF7F2, #DEF7F1)'>
             <Flex display={['none', 'none', 'block', 'block']} mt = {-40} >
@@ -42,7 +42,7 @@ const Home = () => {
             </Box>
             <Image src = {img}></Image>
             </Fade>
-        </>
+        </div>
 
     )
 }

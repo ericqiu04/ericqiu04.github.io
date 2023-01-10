@@ -5,7 +5,7 @@ export const Projects = () => {
 
 
     return (
-        <>
+        <div id = "projects">
 
             <Flex display={['none', 'none', 'none', 'block', 'block']}>
                 <VStack>
@@ -39,7 +39,7 @@ export const Projects = () => {
 
                 </VStack>
             </Flex>
-        </>
+        </div>
 
     )
 }
