@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import MobileNav from "./mobileNav";
 import icon from "../../matcha-tea-icon.png";
 import { Link } from "react-scroll";
+import resume from '../../images/Eric_Qiu_Resume.pdf'
 
 import { Box } from "@chakra-ui/react";
 const Navbar = () => {
@@ -144,13 +145,13 @@ const Navbar = () => {
               </motion.a>
 
               <motion.a
-
+                href = {resume}
                 target="blank"
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
-                <Link to="home" spy={true} smooth={true} duration={500}>
+               
                   <HStack>
                     <Icon
                       color={textCol}
@@ -162,7 +163,7 @@ const Navbar = () => {
                     </Text>
                   </HStack>
 
-                </Link>
+               
 
               </motion.a>
 

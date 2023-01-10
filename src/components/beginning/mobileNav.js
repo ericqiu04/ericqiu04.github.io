@@ -7,6 +7,7 @@ import { MdWork } from "react-icons/md"
 import { HiDocumentText } from 'react-icons/hi'
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import resume from '../../images/Eric_Qiu_Resume.pdf'
 
 
 
@@ -113,7 +114,7 @@ const MobileNav = () => {
                             </motion.a>
 
                             <motion.a
-
+                                href = {resume}
                                 target="blank"
                                 whileHover={{ scale: 1.2 }}
                                 whileTap={{ scale: 0.9 }}
