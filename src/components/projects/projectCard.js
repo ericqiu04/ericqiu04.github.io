@@ -17,7 +17,7 @@ import {
 import { BsBoxArrowDownLeft } from "react-icons/bs";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import {
   Modal,
   ModalOverlay,
@@ -33,6 +33,29 @@ import "../../styles.css";
 import PCardExpand from "./projectCardExpand";
 import { Projects } from "./projects";
 const PCard = (info) => {
+  const flip = {
+    hidden: {
+      transform: "scale(0) rotateX(-360deg)",
+      opacity: 0,
+      transition: {
+        delay: 0.3,
+      },
+    },
+    visible: {
+      transform: " scale(1) rotateX(0deg)",
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+    exit: {
+      transform: "scale(0) rotateX(360deg)",
+      opacity: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
   const [modalOpen, setModalOpen] = useState(false);
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
@@ -108,8 +131,15 @@ const PCard = (info) => {
       </motion.div>
 
 
+
+
+
+
       <Modal onClose={onClose} isOpen={isOpen} isCentered>
+
         <ModalOverlay />
+
+
         {info.projectIMG == null ? (
           <div>
             <ModalContent maxW="80%" display={['none', 'none', 'none', 'block', 'block']}>
@@ -127,7 +157,7 @@ const PCard = (info) => {
                       <Button>Github</Button>
                       <Button>Live</Button>
                     </HStack>
-                    <VStack width = "50%">
+                    <VStack width="50%">
                       <Heading>Description</Heading>
                       <Text>{info.description}</Text>
                     </VStack>
@@ -150,7 +180,7 @@ const PCard = (info) => {
 
             <ModalContent maxW="80%" display={['block', 'block', 'block', 'none', 'none']}>
               <ModalHeader color={darkCol}>{info.projectName}</ModalHeader>
-              <ModalBody align = "center">
+              <ModalBody align="center">
                 <Flex boxSize="50%" justifyContent="center" overflow="scroll">
                   <VStack>
                     <VStack>
@@ -257,9 +287,7 @@ const PCard = (info) => {
 
         )
         }
-
-      </Modal>
-
+    </Modal>
     </>
   );
 };

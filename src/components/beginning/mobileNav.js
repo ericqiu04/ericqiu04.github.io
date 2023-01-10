@@ -9,6 +9,8 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 
 
+
+
 const MobileNav = () => {
 
     var fontSize = 30;
