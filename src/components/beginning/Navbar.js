@@ -153,11 +153,6 @@ const Navbar = () => {
               >
                
                   <HStack>
-                    <Icon
-                      color={textCol}
-                      as={HiDocumentText}
-                      boxSize={["5", "5", "7", "7"]}
-                    />
                     <Text color={textCol} as="b" fontSize="15px">
                       Resume
                     </Text>
