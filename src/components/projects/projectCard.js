@@ -103,7 +103,35 @@ const PCard = (info) => {
 
         <Card
           w="400px"
-          display={["block", "block", 'block', "none", "none"]}
+          display={["none", "block", 'block', "none", "none"]}
+          borderWidth="2px"
+          borderColor={textCol}
+          onClick={onOpen}
+        >
+          <CardBody>
+            <Stack mt="6" spacing="3" p={10}>
+              <Heading color={darkCol} textAlign="center" size="lg">
+                {info.projectName}
+              </Heading>
+              <Text color={textCol} fontSize="15px" as="b" textAlign="center">
+                {info.technologies}
+              </Text>
+              <Text fontSize="15px" textAlign="center"></Text>
+              <Icon
+                color={textCol}
+                position="absolute"
+                top="10px"
+                right="20px"
+                boxSize="30px"
+                as={BsBoxArrowUpRight}
+              ></Icon>
+            </Stack>
+          </CardBody>
+        </Card>
+
+        <Card
+          w="250px"
+          display={["block", "none", 'none', "none", "none"]}
           borderWidth="2px"
           borderColor={textCol}
           onClick={onOpen}
@@ -181,7 +209,7 @@ const PCard = (info) => {
             <ModalContent maxW="80%" display={['block', 'block', 'block', 'none', 'none']}>
               <ModalHeader color={darkCol}>{info.projectName}</ModalHeader>
               <ModalBody align="center">
-                <Flex boxSize="50%" justifyContent="center" overflow="scroll">
+                <Flex boxSize="100%" justifyContent="center" overflow="scroll">
                   <VStack>
                     <VStack>
                       <Heading>Technologies</Heading>
@@ -254,7 +282,7 @@ const PCard = (info) => {
               <ModalBody>
                 <VStack>
                   <Image src={info.projectIMG} boxSize="100%"></Image>
-                  <Flex boxSize="50%" justifyContent="center" overflow="scroll">
+                  <Flex boxSize="100%" justifyContent="center" overflow="scroll">
                     <VStack>
                       <VStack>
                         <Heading>Technologies</Heading>

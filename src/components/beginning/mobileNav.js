@@ -12,7 +12,7 @@ import resume from '../../images/Eric_Qiu_Resume.pdf'
 
 
 
-const MobileNav = () => {
+const MobileNav = (props) => {
 
     var fontSize = 30;
     const textCol = useColorModeValue('#61876E', '#A6BB8D')
@@ -24,10 +24,12 @@ const MobileNav = () => {
                     <Flex position="fixed" h="100%" w="100%" textAlign="center">
                         <VStack spacing={10} w="250px" mt="50px" >
                             <motion.a
+                                
                                 target="blank"
                                 whileHover={{ scale: 1.2 }}
                                 whileTap={{ scale: 0.9 }}
                                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                                
                             >
                                 <Link to="home" spy={true} smooth={true} duration={500}>
                                     <HStack>

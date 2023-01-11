@@ -237,7 +237,7 @@ const Navbar = () => {
               onClick={onToggle}
             />
 
-            <MobileNav />
+            <MobileNav onToggle = {onToggle} isOpen = {isOpen}/>
           </Slide>
         </Flex>
       </Box>

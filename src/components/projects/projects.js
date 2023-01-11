@@ -24,9 +24,9 @@ export const Projects = () => {
                 </VStack>
             </Flex>
 
-            <Flex display={['block', 'block', 'block', 'none', 'none']} >
+            <Flex display={['block', 'block', 'block', 'none', 'none']} j>
                 <VStack >
-                    <Text fontSize={50} as='b' mt={-50} mb={10} color="#3C6255">
+                    <Text fontSize={50} as='b' mt={-50} mb={10}>
                         Projects
                     </Text>
 
