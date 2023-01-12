@@ -163,85 +163,49 @@ const PCard = (info) => {
 
 
 
-      <Modal onClose={onClose} isOpen={isOpen} isCentered>
+      <Modal onClose = {onClose} isOpen={isOpen} isCentered overflow="scroll">
 
         <ModalOverlay />
 
 
         {info.projectIMG == null ? (
-          <div>
-            <ModalContent maxW="80%" display={['none', 'none', 'none', 'block', 'block']}>
-              <ModalHeader color={darkCol}>{info.projectName}</ModalHeader>
-              <ModalBody>
 
-
-                <Flex justifyContent="center" overflow="scroll">
+          <ModalContent maxW="80%" display={['block', 'block', 'block', 'block', 'block']}>
+            <ModalHeader color={darkCol}>{info.projectName}</ModalHeader>
+            <ModalBody align="center">
+              <Flex boxSize="100%" justifyContent="center" overflow="scroll">
+                <VStack>
                   <VStack>
-                    <VStack>
-                      <Heading>Technologies</Heading>
-                      <Text>{info.technologies}</Text>
-                    </VStack>
-                    <HStack>
-                      <Button>Github</Button>
-                      <Button>Live</Button>
-                    </HStack>
-                    <VStack width="50%">
-                      <Heading>Description</Heading>
-                      <Text>{info.description}</Text>
-                    </VStack>
+                    <Heading>Technologies</Heading>
+                    <Text>{info.technologies}</Text>
                   </VStack>
-                </Flex>
-
-                <IconButton
-                  onClick={onClose}
-                  bg="default"
-                  color={textCol}
-                  position="absolute"
-                  top="20px"
-                  right="20px"
-                  boxSize="30px"
-                  as={BsBoxArrowDownLeft}
-                ></IconButton>
-              </ModalBody>
-            </ModalContent>
-
-
-            <ModalContent maxW="80%" display={['block', 'block', 'block', 'none', 'none']}>
-              <ModalHeader color={darkCol}>{info.projectName}</ModalHeader>
-              <ModalBody align="center">
-                <Flex boxSize="100%" justifyContent="center" overflow="scroll">
+                  <HStack>
+                    <Button><a href={info.projectGithub} target ="blank">Github</a></Button>
+                  </HStack>
                   <VStack>
-                    <VStack>
-                      <Heading>Technologies</Heading>
-                      <Text>{info.technologies}</Text>
-                    </VStack>
-                    <HStack>
-                      <Button>Github</Button>
-                      <Button>Live</Button>
-                    </HStack>
-                    <VStack>
-                      <Heading>Description</Heading>
-                      <Text>{info.description}</Text>
-                    </VStack>
+                    <Heading>Description</Heading>
+                    <Text>{info.description}</Text>
                   </VStack>
-                </Flex>
+                </VStack>
+              </Flex>
 
-                <IconButton
-                  onClick={onClose}
-                  bg="default"
-                  color={textCol}
-                  position="absolute"
-                  top="20px"
-                  right="20px"
-                  boxSize="30px"
-                  as={BsBoxArrowDownLeft}
-                ></IconButton>
-              </ModalBody>
-            </ModalContent>
-          </div>
+              <IconButton
+                onClick={onClose}
+                bg="default"
+                color={textCol}
+                position="absolute"
+                top="20px"
+                right="20px"
+                boxSize="30px"
+                as={BsBoxArrowDownLeft}
+              ></IconButton>
+            </ModalBody>
+          </ModalContent>
+
         ) : (
-          <>
-            <ModalContent maxW="80%" display={['none', 'none', 'none', 'block', 'block']}>
+
+          <ModalContent maxW="80%" display={['none', 'none', 'none', 'block', 'block']}>
+            <Box display={['none', 'none', 'none', 'block', 'block']}>
               <ModalHeader color={darkCol}>{info.projectName}</ModalHeader>
               <ModalBody>
                 <HStack>
@@ -253,8 +217,7 @@ const PCard = (info) => {
                         <Text>{info.technologies}</Text>
                       </VStack>
                       <HStack>
-                        <Button>Github</Button>
-                        <Button>Live</Button>
+                        <Button><a href={info.projectGithub} target="blank">Github</a></Button>
                       </HStack>
                       <VStack>
                         <Heading>Description</Heading>
@@ -274,10 +237,9 @@ const PCard = (info) => {
                   as={BsBoxArrowDownLeft}
                 ></IconButton>
               </ModalBody>
-            </ModalContent>
+            </Box>
 
-
-            <ModalContent maxW="80%" display={['block', 'block', 'block', 'none', 'none']}>
+            <Box display={['block', 'block', 'block', 'none', 'none']}>
               <ModalHeader color={darkCol}>{info.projectName}</ModalHeader>
               <ModalBody>
                 <VStack>
@@ -289,8 +251,8 @@ const PCard = (info) => {
                         <Text>{info.technologies}</Text>
                       </VStack>
                       <HStack>
-                        <Button>Github</Button>
-                        <Button>Live</Button>
+                        <Button><a href={info.projectGithub}>Github</a></Button>
+
                       </HStack>
                       <VStack>
                         <Heading>Description</Heading>
@@ -310,12 +272,15 @@ const PCard = (info) => {
                   as={BsBoxArrowDownLeft}
                 ></IconButton>
               </ModalBody>
-            </ModalContent>
-          </>
+            </Box>
+          </ModalContent>
+
+
+
 
         )
         }
-    </Modal>
+      </Modal>
     </>
   );
 };
