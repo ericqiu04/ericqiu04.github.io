@@ -30,7 +30,6 @@ import {
   Button,
 } from "@chakra-ui/react";
 import "../../styles.css";
-import PCardExpand from "./projectCardExpand";
 import { Projects } from "./projects";
 const PCard = (info) => {
   const flip = {
@@ -72,12 +71,12 @@ const PCard = (info) => {
         onClick={() => (modalOpen ? close() : open())}
         className="projectCard"
         border="10px"
+        
       >
         <Card
           w="500px"
           display={["none", "none", 'none', "block", "block"]}
-          borderWidth="2px"
-          borderColor={textCol}
+          bg = "#DEF5E5"
           onClick={onOpen}
         >
           <CardBody>
@@ -104,8 +103,7 @@ const PCard = (info) => {
         <Card
           w="400px"
           display={["none", "block", 'block', "none", "none"]}
-          borderWidth="2px"
-          borderColor={textCol}
+          bg = "#DEF5E5"
           onClick={onOpen}
         >
           <CardBody>
@@ -130,10 +128,10 @@ const PCard = (info) => {
         </Card>
 
         <Card
+          bg = "#DEF5E5"
           w="250px"
           display={["block", "none", 'none', "none", "none"]}
-          borderWidth="2px"
-          borderColor={textCol}
+          bg = "#DEF5E5"
           onClick={onOpen}
         >
           <CardBody>
